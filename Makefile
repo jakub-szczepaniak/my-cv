@@ -1,1 +1,4 @@
-output: xelatex cv.tex
+CC = xelatex
+
+output: cv.tex
+	$(xelatex) cv.tex
