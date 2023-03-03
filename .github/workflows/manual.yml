@@ -27,4 +27,5 @@ jobs:
            repo_token: "${{ secrets.GITHUB_TOKEN }}"
            prerelease: false
            title: TestRelease
+           automatic_release_tag: latest
            files: cv.pdf
