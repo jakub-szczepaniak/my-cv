@@ -19,11 +19,11 @@ jobs:
     # Runs a single command using the runners shell
      - uses: actions/checkout@v2
      - name: Build Document
-        uses: docker://vipintm/xelatex:latest
-        with:
+       uses: docker://vipintm/xelatex:latest
+       with:
           entrypoint: make
      - uses: "marvinpinto/action-automatic-releases@latest"
-         with:
+       with:
            repo_token: "${{ secrets.GITHUB_TOKEN }}"
            prerelease: false
            title: TestRelease
