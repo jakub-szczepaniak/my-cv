@@ -26,6 +26,6 @@ jobs:
        with:
            repo_token: "${{ secrets.GITHUB_TOKEN }}"
            prerelease: false
-           title: TestRelease
+           title: CV Jakub Szczepaniak
            automatic_release_tag: latest
            files: cv.pdf
