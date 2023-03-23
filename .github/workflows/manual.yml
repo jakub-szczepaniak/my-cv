@@ -28,4 +28,4 @@ jobs:
            prerelease: false
            title: CV Jakub Szczepaniak
            automatic_release_tag: latest
-           files: cv.pdf
+           files: jakub-szczepaniak-cv.pdf
