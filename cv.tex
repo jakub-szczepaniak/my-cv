@@ -1,199 +1,192 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Developer CV
-% LaTeX Template
-% Version 1.0 (28/1/19)
+% !TeX spellcheck = en_GB
+% !TeX program = pdflatex
 %
-% This template originates from:
-% http://www.LaTeXTemplates.com
+% LetzCV-sleek 1.0 LaTeX template
+% Author: Andreï V. Kostyrka, University of Luxembourg
 %
-% Authors:
-% Jan Vorisek (jan@vorisek.me)
-% Based on a template by Jan Küster (info@jankuester.com)
-% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
+% This template fills the gap in the available variety of templates
+% by proposing something that is not a custom class, not using any
+% hard-coded settings deeply hidden in style files, and provides
+% a handful of custom command definitions that are as transparent as it gets.
+% Developed at the University of Luxembourg.
 %
-% License:
-% The MIT License (see included LICENSE file)
+% *NOTHING IS HARCODED, and never should be.*
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Target audience: applicants in the IT industry, or business in general
+%
+% The main strength of this template is, it explicitly showcases how
+% to break the flow of text to achieve the most flexible right alignment
+% of dates for multiple configurations.
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{article} 
 
-\documentclass[8pt]{developercv} % Default font size, values from 8-12pt are recommended
+\usepackage[T1]{fontenc}     % We are using pdfLaTeX,
+\usepackage[utf8]{inputenc}  % hence this preparation
+\usepackage[british]{babel}  
+\usepackage[left = 0mm, right = 0mm, top = 0mm, bottom = 0mm]{geometry}
+\usepackage[stretch = 25, shrink = 25]{microtype}  
+\usepackage{graphicx}        % To insert pictures
+\usepackage{xcolor}          % To add colour to the document
+\usepackage{marvosym}        % Provides icons for the contact details
 
-%----------------------------------------------------------------------------------------
+\usepackage{enumitem}        % To redefine spacing in lists
+\setlist{parsep = 0pt, topsep = 0pt, partopsep = 1pt, itemsep = 1pt, leftmargin = 6mm}
+
+\usepackage{FiraSans}        % Change this to use any font, but keep it simple
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{cvblue}{HTML}{304263}
+
+%%%%%%% USER COMMAND DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% These are the real workhorses of this template
+\newcommand{\dates}[1]{\hfill\mbox{\textbf{#1}}} % Bold stuff that doesn’t got broken into lines
+\newcommand{\is}{\par\vskip.5ex plus .4ex} % Item spacing
+\newcommand{\smaller}[1]{{\small$\diamond$\ #1}}
+\newcommand{\headleft}[1]{\vspace*{3ex}\textsc{\textbf{#1}}\par%
+    \vspace*{-1.5ex}\hrulefill\par\vspace*{0.7ex}}
+\newcommand{\headright}[1]{\vspace*{2.5ex}\textsc{\Large\color{cvblue}#1}\par%
+     \vspace*{-2ex}{\color{cvblue}\hrulefill}\par}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[colorlinks = true, urlcolor = white, linkcolor = white]{hyperref}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+% Style definitions -- killing the unnecessary space and adding the skips explicitly
+\setlength{\topskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+\pagestyle{empty}
+\raggedbottom
 
-\begin{minipage}[t]{0.37\textwidth} % 45% of the page width for name
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	% If your name is very short, use just one of the lines below
-	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
-	\colorbox{black}{{\Huge\textcolor{white}{\textbf{\MakeUppercase{Jakub}}}}} % First name
-	
-	\colorbox{black}{{\Huge\textcolor{white}{\textbf{\MakeUppercase{Szczepaniak}}}}} % Last name
-	
-	\vspace{6pt}
-	
-	{\LARGE Engineering Manager} % Career or current job title
+\begin{minipage}[t]{0.33\textwidth} %% Left column -- outer definition
+%  Left column -- top dark rectangle
+\colorbox{cvblue}{\begin{minipage}[t][5mm][t]{\textwidth}\null\hfill\null\end{minipage}}
+
+\vspace{-.2ex} % Eliminates the small gap
+\colorbox{cvblue!90}{\color{white}  %% LEFT BOX
+\kern0.09\textwidth\relax% Left margin provided explicitly
+\begin{minipage}[t][293mm][t]{0.82\textwidth}
+\raggedright
+\vspace*{2.5ex}
+
+\Large Jakub \textbf{\textsc{Szczepaniak}} \normalsize 
+
+% Centering without extra vertical spacing
+\null\hfill\includegraphics[width=0.65\textwidth]{photo.png}\hfill\null
+
+\vspace*{0.5ex} % Extra space after the picture
+
+\headleft{Profile}
+I am experienced \textbf{engineering manager} with over 15~years of experience both as a people manager and individual contributor.
+In my career, I have worked in different company sizes/types (from startups to big enterprises), using variety of different technologies and tools.
+The greatest satisfaction for me is to enable my colleagues to grow professionally by creating a safe space for them to perform and working together on challenging technical problems.
+
+\headleft{Contact details}
+\small % To fit more content
+\MVAt\ {\small szczepaniak.jkb@gmail.com} \\[0.4ex]
+\Mobilefone\ +352\,123\,456\,789 \\[0.5ex]
+\Mundus\ \href{https://github.com/jakub-szczepaniak}{github.com/jakub-szczepaniak} \\[0.1ex]
+\Mundus\ \href{https://jszczepaniak.com}{jszczepaniak.com} \\[0.1ex]
+\Letter\ Linienstrasse 127, 10115 Berlin, DE
+\normalsize
+
+\headleft{Personal information}
+%Year of birth: \textbf{1861} \\[0.5ex]
+Citizenship: \textbf{polish} \\[0.5ex]
+Family: \textbf{Married, 2 kids} \\[0.5ex]
+Languages: \textbf{Polish} (native), \textbf{English} (C1), \textbf{German} (B1)
+
+\headleft{Skills}
+\begin{itemize}
+\item Python, Ruby, Terraform
+\item RSpec, DDD, TDD, AWS
+\item Team management, Leadership
+\item Scrum, Platform Engineering
+\end{itemize} 
+
+\end{minipage}%
+\kern0.09\textwidth\relax%%Right margin provided explicitly to stretch the colourbox
+}
+\end{minipage}% Right column
+\hskip2.5em% Left margin for the white area
+\begin{minipage}[t]{0.56\textwidth}
+\setlength{\parskip}{0.8ex}% Adds spaces between paragraphs; use \\ to add new lines without this space. Shrink this amount to fit more data vertically
+
+\vspace{2ex}
+
+\headright{Experience}
+
+\textsc{Engineering Manager} at \textit{HeyJobs GmbH (Berlin, Germany).}  \dates{2022.10--pres.} \\
+\smaller{I am leading a team of engineers, providing a stable marketing platform for other marketing teams at HeyJobs. }
+
+\is % Item spacing -- defined in the preamble
+\textsc{Software Developer} at \textit{Milengo GmbH (Berlin, Germany).} \\
+\null\dates{2019.10--2022.10} \\[-\baselineskip]
+\smaller{Internal TMS system : www.languagedesk.com } \\
+\smaller{Tools for ETL, data sourcing, term extraction} \\
+\smaller{Python, Ruby on Rails, EmberJs} \\
+
+\is
+\textsc{Full time Dad} \dates{2019.01--2019.10} \\
+\smaller{Raising small humans} \\
+\smaller{Effective time management, conflict resolution, team organization} \\
+
+\is
+\textsc{Solutions Architect} at \textit{ Milengo GmbH (Berlin, Germany).} \\ 
+% \null is necessary here because this is a manually enforced break
+% and \dates start with an \hfill that needs a \nukk
+\null\dates{2015.06--2018.12} \\[-\baselineskip]
+\smaller{Acting as Sales Support Engineer} \\
+\smaller{Responsible for all Technical aspects of localization for our clients}
+
+\is
+\textsc{Engineering Lead} at \textit{Milengo GmbH (Berlin, Germany)} \\ 
+\null\dates{2012.11--2015.06} \\[-\baselineskip]
+\smaller{Created a team of localizaton engineers in Berlin.} \\
+\smaller{Established the foundation for localization engineering processes. }
+
+\is
+\textsc{Engineering Lead} at \textit{Lionbridge Poland (Warsaw).} \dates{2008.10--2012.10} \\
+\smaller{Leading a team of 10+ localization engineers.} \\
+\smaller{Main clients: Nokia, Microsoft, Adobe, VmWare}
+
+\headright{Presentations}
+\textsc{Tekom 2015 in Stuttgart} \textit{Case Study: How to quadruple e-Commerce localizaton productivity with MT-post editing} \\
+
+
+\headright{Education}
+
+\textsc{Lodz University of Technology} \textit{Technical Physics, Informatics and Applied Maths Institute}. \dates{1999--2006} \\
+
+\headright{Additional education}
+
+
+\is
+\textsc{Conflict resolution and effective communication}
+\textit{HeyJobs} \dates{2023}
+
+\is
+\textsc{Memsource Certified Trainer}
+\textsc{Milengo} \dates{2016}
+
+\is
+\textsc{Coaching tools for managers}
+\textit{Lionbridge} \dates{2012} 
+
+\is
+\textsc{Presentation skills}
+\textit{Lionbridge} \dates{2011}
+
+
+\headright{Hobbies}
+
+\textit{DYI:} Electronics, IoT, Raspberry PI.
+
+\textit{Literature:} German literature of 1920s.
+
+\textit{History:} 19/20th century.
 \end{minipage}
-\begin{minipage}[t]{0.315\textwidth} % 27.5% of the page width for the first row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{MapMarker}{12}{Berlin}\\
-	\icon{Phone}{12}{+49 015 784 748 833}\\
-	\icon{At}{12}{\href{mailto:szczepaniak.jkb@gmail.com}{szczepaniak.jkb@gmail.com}}\\	
-\end{minipage}
-\begin{minipage}[t]{0.315\textwidth} % 27.5% of the page width for the second row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{Globe}{12}{\href{https://jszczepaniak.com/}{jszczepaniak.com}}\\
-	\icon{Github}{12}{\href{https://github.com/jakub-szczepaniak}{github.com/jakub-szczepaniak}}\\
-	\icon{Linkedin}{12}{\href{https://www.linkedin.com/in/jakub-szczepaniak/}{/in/jakub-szczepaniak}}\\
-\end{minipage}
-
-\vspace{0.5cm}
-
-%----------------------------------------------------------------------------------------
-%	INTRODUCTION, SKILLS AND TECHNOLOGIES
-%----------------------------------------------------------------------------------------
-
-\cvsect{Who Am I?}
-
-\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	{I am experienced Software Engineer with strong backend focus and passion for growing teams. I live in Berlin with my wife and 2 kids.  }
-\end{minipage}
-\hfill % Whitespace between
-\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	\begin{barchart}{5.5}
-		\baritem{Python}{80}
-		\baritem{Ruby on Rails}{80}
-		\baritem{Team management}{70}
-		\baritem{Linux}{70}
-		\baritem{AWS}{40}
-		\baritem{Postgres}{60}
-	\end{barchart}
-\end{minipage}
-
-\begin{center}
-	\bubbles{5/SCRUM, 6/git, 4/JIRA, 4/TDD, 3/DDD}
-\end{center}
-
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
-
-\cvsect{Experience}
-
-\begin{entrylist}
-	\entry
-		{2022 -- now}
-		{Engineering Manager, Marketing Automation}
-		{HeyJobs GmbH, Berlin}
-		{Together with the team of 5 Software Engineers I am on the mission to help with essential talent shortage in Germany. We are providing platform for other Marketing Automation teams.\\ We are working mainly with Ruby on Rails; for some parts of the system we use Python.
-		\\ \texttt{Ruby on Rails}\slashsep\texttt{Python}\slashsep\texttt{AWS}\slashsep\texttt{SideKiq}\slashsep\texttt{Terraform}}
-	\entry
-		{2019 -- 2022}
-		{Software Engineer}
-		{Milengo GmbH}
-		{I was working on internal TMS system (www.languagedesk.com), main focus: integrations with other CAT tools.
-			\\ \texttt{Ruby on Rails}\slashsep\texttt{EmberJS}\slashsep\texttt{Python}\slashsep\texttt{TCL}\slashsep\texttt{Postgres}}
-	\entry
-		{2012 -- 2018}
-		{Localization Enginnering Lead}
-		{Milengo GmbH, Berlin}
-		{I created and managed a team of 4 Localization Engineers in Berlin HQ
-		\\ \texttt{Python}\slashsep\texttt{CAT Tools}\slashsep\texttt{Team Management}}
-	\entry
-		{2008-2012}
-		{Localization Engineer}
-		{Lionbridge Poland Sp. z o.o., Warsaw}
-		{I started as a Localization Engineer and went up the corporate ladder to lead a team of 11 localization engineers.
-		I also lead engineering efforts in Nokia CARE localization program.
-		\\ \texttt{Python}\slashsep\texttt{CAT Tools}\slashsep\texttt{Team Management}}
-	\entry
-		{2007-2008}
-		{Technician}
-		{MBM S.c., Zgierz, Poland }
-		{ }
-	\entry
-		{2003}
-		{Junior Software Developer, Internship}
-		{Studio101.com }
-		{ }
-	\entry
-		{2002}
-		{Technician}
-		{Sokra.net }
-		{ }
-\end{entrylist}
-
-\cvsect{Presentations}
-
-\begin{entrylist}
-	\entry
-		{2015}
-		{ \\ }
-		{Tekom, Stuttgart}
-		{Case Study: How to Quadruple E-Commerce Localization Productivity with 
-		MT Post-editing }
-\end{entrylist}
-
-
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
-\cvsect{Education}
-
-\begin{entrylist}
-	\entry
-		{1997 -- 2006}
-		{Master's Degree}
-		{Łódź University of Technology}
-		{faculty of Technical Physics, Information Technologies and Applied Maths.}
-\end{entrylist}
-
-%----------------------------------------------------------------------------------------
-%	ADDITIONAL INFORMATION
-%----------------------------------------------------------------------------------------
-
-\begin{minipage}[t]{0.3\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-
-	\cvsect{Languages}
-	
-	\textbf{English} - fluent\\
-	\textbf{German} - intermediate\\
-	\textbf{Polish} - native
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.3\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	\cvsect{Hobbies}
-	
-	Solving puzzles\\
-	Exploring Berlin playgrounds\\
-	Baking sourdough bread\\
-	DYI/Electronics
-\end{minipage}
-\hfill
-
-%----------------------------------------------------------------------------------------
 
 \end{document}
